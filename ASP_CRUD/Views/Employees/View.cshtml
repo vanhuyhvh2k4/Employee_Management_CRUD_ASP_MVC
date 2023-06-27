@@ -1,0 +1,33 @@
+﻿@model ASP_CRUD.Models.UpdateEmployeeViewModel
+@{
+}
+
+<h1>Edit Employees</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="name" class="form-label">Id</label>
+        <input id="name" type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Name</label>
+        <input id="email" type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" asp-action="Delete" asp-controller="Employees">Delete</button>
+</form>
